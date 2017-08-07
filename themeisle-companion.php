@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: ThemeIsle Companion for Scout theme
- * Plugin URI: https://github.com/Codeinwp/themeisle-companion
+ * Plugin URI: https://github.com/skaut/scouttheme-companion
  * Description: Enhances ThemeIsle's themes with extra functionalities.
  * Version: 1.0.2
  * Author: Themeisle / Jan Teply
