@@ -64,9 +64,9 @@ if ( !class_exists( 'zerif_team_widget' ) ) {
 
 
 						<figure class="profile-pic">
-
+                            <a href="<?php echo apply_filters( 'widget_title', $instance['link'] ); ?>">
 							<img src="<?php echo esc_url( $instance['image_uri'] ); ?>" alt=""/>
-
+                            </a>
 						</figure>
 						<?php
 					} elseif ( ! empty( $instance['custom_media_id'] ) ) {
@@ -79,8 +79,10 @@ if ( !class_exists( 'zerif_team_widget' ) ) {
 
 							<figure class="profile-pic">
 
-								<img src="<?php echo esc_url( $zerif_team_custom_media_id[0] ); ?>"
+                                <a href="<?php echo apply_filters( 'widget_title', $instance['link'] ); ?>">
+                               	<img src="<?php echo esc_url( $zerif_team_custom_media_id[0] ); ?>"
 								     alt="<?php echo $alt; ?>"/>
+                                </a>
 
 							</figure>
 
@@ -244,6 +246,7 @@ if ( !class_exists( 'zerif_team_widget' ) ) {
 			$instance['name']                = strip_tags( $new_instance['name'] );
 			$instance['position']            = stripslashes( wp_filter_post_kses( $new_instance['position'] ) );
 			$instance['description']         = stripslashes( wp_filter_post_kses( $new_instance['description'] ) );
+            $instance['link']                = strip_tags( $new_instance['link'] );
 			$instance['fb_link']             = strip_tags( $new_instance['fb_link'] );
 			$instance['tw_link']             = strip_tags( $new_instance['tw_link'] );
 			$instance['bh_link']             = strip_tags( $new_instance['bh_link'] );
@@ -290,6 +293,15 @@ if ( !class_exists( 'zerif_team_widget' ) ) {
 					if ( ! empty( $instance['description'] ) ): echo htmlspecialchars_decode( $instance['description'] ); endif;
 					?></textarea>
 			</p>
+            <p>
+                <label
+                        for="<?php echo $this->get_field_id( 'link' ); ?>"><?php _e( 'Odkaz profilového obrázku', 'skaut-theme' ); ?></label><br/>
+                <input type="text" name="<?php echo $this->get_field_name( 'link' ); ?>"
+                       id="<?php echo $this->get_field_id( 'link' ); ?>"
+                       value="<?php if ( ! empty( $instance['link'] ) ): echo $instance['link']; endif; ?>"
+                       class="widefat">
+
+            </p>
 			<p>
 				<label
 					for="<?php echo $this->get_field_id( 'fb_link' ); ?>"><?php _e( 'Facebook link', 'zerif-lite' ); ?></label><br/>
