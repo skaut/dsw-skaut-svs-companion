@@ -1,5 +1,5 @@
 === ThemeIsle Companion for Scout theme===
-Contributors: themeisle, codeinwp, rodicaelena, baicusandrei, janteply, skaut
+Contributors: themeisle, codeinwp, rodicaelena, baicusandrei, homin, skaut
 Tags: widget, admin, widgets
 Requires at least: 3.0
 Tested up to: 4.9
@@ -7,7 +7,7 @@ Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Vytváří widgety ve Scout Theme.
+Vytváří widgety v šabloně DSW - skaut SVS
 
 == Description ==
 
