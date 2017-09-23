@@ -68,12 +68,7 @@ function scout_companion_check_for_updates( $transient ) {
 
 	if ( preg_match( '~\d+\.\d+~', $actual->tag_name ) === 1 ) {
 		$package = $actual->zipball_url;
-
-		if ( strpos( $actual->tag_name, 'v' ) === 0 ) {
-			$version = substr( $actual->tag_name, 1 );
-		} else {
-			$version = $actual->tag_name;
-		}
+		$version = $actual->tag_name;
 
 		if ( $package !== null && version_compare( $transient->checked[ $pluginName ], $version, '<' ) ) {
 			$transient->response[ $pluginName ] = [
