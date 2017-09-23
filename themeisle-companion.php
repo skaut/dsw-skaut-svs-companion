@@ -45,10 +45,12 @@ function scout_companion_check_for_updates( $transient ) {
 	}
 
 	$pluginName = '';
+	$pluginSlug = '';
 
 	foreach ( $transient->checked as $plugin => $version ) {
 		if ( strpos( $plugin, 'dsw-skaut-svs-companion' ) !== false ) {
 			$pluginName = $plugin;
+			$pluginSlug = dirname( $plugin );
 		}
 	}
 
@@ -71,7 +73,8 @@ function scout_companion_check_for_updates( $transient ) {
 		$version = $actual->tag_name;
 
 		if ( $package !== null && version_compare( $transient->checked[ $pluginName ], $version, '<' ) ) {
-			$transient->response[ $pluginName ] = [
+			$transient->response[ $pluginSlug ] = [
+				'slug'        => $pluginSlug,
 				'new_version' => $version,
 				'url'         => $actual->html_url,
 				'package'     => $package
