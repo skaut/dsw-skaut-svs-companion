@@ -88,7 +88,7 @@ function scout_companion_check_for_updates( $transient ) {
 add_filter( 'pre_set_site_transient_update_plugins', 'scout_companion_check_for_updates' );
 
 add_filter( 'upgrader_package_options', function ( $options ) {
-	if ( isset( $options['hook_extra'], $options['hook_extra']['plugin'] ) && strpos( $options['hook_extra']['plugin'], 'dsw-skaut-svs-companion' ) === false ) {
+	if ( ! isset( $options['hook_extra'], $options['hook_extra']['plugin'] ) || strpos( $options['hook_extra']['plugin'], 'dsw-skaut-svs-companion' ) === false ) {
 		return $options;
 	}
 
