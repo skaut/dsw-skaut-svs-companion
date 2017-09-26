@@ -3,7 +3,7 @@
  * Plugin Name: DSW Skaut SVS companion
  * Plugin URI: https://github.com/skaut/dsw-skaut-svs-companion 
  * Description: Enhances ThemeIsle's themes with extra functionalities.
- * Version: 1.0.9
+ * Version: 1.1
  * Author: Themeisle / Jan Teply
  * Author URI: http://themeisle.com
  * Text Domain: themeisle-companion-scout
