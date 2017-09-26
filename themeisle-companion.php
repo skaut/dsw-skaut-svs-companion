@@ -12,7 +12,7 @@
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  */
 
-define( 'THEMEISLE_COMPANION_VERSION',  '1.0.9' );
+define( 'THEMEISLE_COMPANION_VERSION',  '1.1' );
 define( 'THEMEISLE_COMPANION_PATH',  plugin_dir_path( __FILE__ ) );
 define( 'THEMEISLE_COMPANION_URL',  plugin_dir_url( __FILE__ ) );
 
